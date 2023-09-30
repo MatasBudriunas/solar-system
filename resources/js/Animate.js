@@ -10,6 +10,12 @@ export function animate(camera, sun, planetMeshes, renderer, scene, state, ambie
     function animate() {
         requestAnimationFrame(animate);
 
+        if (state.isPaused) {
+            updateCameraPosition(camera, state);
+            renderer.render(scene, camera);
+            return;
+        }
+
         time += timeIncrement;
         lightTime += lightTimeIncrement;
 
