@@ -30,10 +30,10 @@ final class PlanetConstants
             'moons' => [
                 [
                     'name' => 'Moon',
-                    'orbitRadius' => 2,
+                    'orbitRadius' => 2.3,
                     'size' => 0.3,
                     'texture' => '/textures/earth-moon-texture-8k.jpg',
-                    'rotationSpeed' => 0.02,
+                    'rotationSpeed' => 0.25,
                 ],
             ],
         ],
