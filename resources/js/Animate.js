@@ -1,14 +1,19 @@
 import { updateCameraPosition } from './ControlHandlers.js'
 
-export function animate(camera, sun, planetMeshes, renderer, scene, state) {
+export function animate(camera, sun, planetMeshes, renderer, scene, state, ambientLight) {
     let timeIncrement = 0.1;
+    let lightTimeIncrement = 0.01;
     let time = 0;
+    let lightTime = 0;
     let sunRotationSpeed = 0.00005;
 
     function animate() {
         requestAnimationFrame(animate);
 
         time += timeIncrement;
+        lightTime += lightTimeIncrement;
+
+        ambientLight.intensity = 7 + 8 * Math.sin(lightTime);
 
         planetMeshes.forEach((planetData) => {
             const orbitTime = time * planetData.rotationSpeed;
