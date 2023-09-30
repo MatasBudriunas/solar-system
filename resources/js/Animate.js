@@ -26,6 +26,18 @@ export function animate(camera, sun, planetMeshes, renderer, scene, state, ambie
 
             planetData.mesh.position.x = planetData.orbitRadius * Math.cos(orbitTime);
             planetData.mesh.position.z = planetData.orbitRadius * Math.sin(orbitTime);
+
+            if (planetData.mesh.children.length > 0) {
+                planetData.mesh.children.forEach((childMesh) => {
+                    if (childMesh.name === "SaturnRing") {
+                        childMesh.rotation.z += 0.001;
+                    } else {
+                        const moonOrbitTime = time * childMesh.rotationSpeed;
+                        childMesh.position.x = childMesh.orbitRadius * Math.cos(moonOrbitTime);
+                        childMesh.position.z = childMesh.orbitRadius * Math.sin(moonOrbitTime);
+                    }
+                });
+            }
         });
         updateCameraPosition(camera, state);
 

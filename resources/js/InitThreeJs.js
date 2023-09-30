@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { addStars } from '../js/AddStars.js';
+import { addMilkyWay } from '../js/AddStars.js';
 
 export default function initThreeJS(state) {
     const scene = new THREE.Scene();
@@ -13,7 +13,7 @@ export default function initThreeJS(state) {
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
-    addStars(scene);
+    addMilkyWay(scene);
 
     return { scene, camera, renderer };
 }

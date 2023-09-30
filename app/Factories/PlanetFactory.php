@@ -4,7 +4,7 @@ namespace App\Factories;
 
 class PlanetFactory
 {
-    public static function createPlanet($name, $rotationSpeed, $orbitRadius, $size, $texture): array
+    public static function createPlanet($name, $rotationSpeed, $orbitRadius, $size, $texture, ?array $moons): array
     {
         return [
             'name' => $name,
@@ -12,6 +12,7 @@ class PlanetFactory
             'orbitRadius' => $orbitRadius,
             'size' => $size,
             'texture' => $texture,
+            'moons' => $moons ?? null,
         ];
     }
 }
