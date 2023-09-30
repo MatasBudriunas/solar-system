@@ -29,17 +29,17 @@ export async function createPlanets() {
         }
 
         if (planetData.name === 'Saturn') {
-            const ringInnerRadius = 1.2 * planetData.size;
-            const ringOuterRadius = 2.0 * planetData.size;
+            const ringInnerRadius = 1.3 * planetData.size;
+            const ringOuterRadius = 1.3 * planetData.size;
             const ringHeight = 0.02;
-            const ringSegments = 128;
+            const ringSegments = 120;
 
             const ringGeometry = new THREE.CylinderGeometry(ringInnerRadius, ringOuterRadius, ringHeight, ringSegments);
             const ringTexture = new THREE.TextureLoader().load('/textures/saturn-ring-texture-8k.png');
             const ringMaterial = new THREE.MeshBasicMaterial({ map: ringTexture, side: THREE.DoubleSide });
             const ring = new THREE.Mesh(ringGeometry, ringMaterial);
 
-            ring.rotation.x = Math.PI / 2;
+            ring.rotation.x = Math.PI / 1.6;
 
             ring.name = 'SaturnRing';
             planet.add(ring);
