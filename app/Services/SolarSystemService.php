@@ -22,7 +22,8 @@ class SolarSystemService
                 $planet['rotationSpeed'],
                 $planet['orbitRadius'],
                 $planet['size'],
-                $planet['texture']
+                $planet['texture'],
+                $planet['moons'] ?? null,
             );
         }
 

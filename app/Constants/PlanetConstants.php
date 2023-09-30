@@ -10,8 +10,8 @@ final class PlanetConstants
         'MERCURY' => [
             'name' => 'Mercury',
             'rotationSpeed' => 0.005,
-            'orbitRadius' => 5,  // approximated, not to scale
-            'size' => 0.4,  // scaled down size, not to scale
+            'orbitRadius' => 5,
+            'size' => 0.4,
             'texture' => '/textures/mercury-texture-8k.jpg',
         ],
         'VENUS' => [
@@ -27,6 +27,15 @@ final class PlanetConstants
             'orbitRadius' => 12,
             'size' => 1,
             'texture' => '/textures/earth-texture-8k.jpg',
+            'moons' => [
+                [
+                    'name' => 'Moon',
+                    'orbitRadius' => 2,
+                    'size' => 0.3,
+                    'texture' => '/textures/earth-moon-texture-8k.jpg',
+                    'rotationSpeed' => 0.02,
+                ],
+            ],
         ],
         'MARS' => [
             'name' => 'Mars',

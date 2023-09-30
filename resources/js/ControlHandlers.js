@@ -62,3 +62,15 @@ export const updateCameraPosition = (camera, state) => {
     camera.position.set(x, y, z);
     camera.updateProjectionMatrix();
 };
+
+export const handlePause = (state) => {
+    window.addEventListener('keydown', function(event) {
+        switch (event.code) {
+            case "Space":
+                state.isPaused = !state.isPaused;
+                break;
+            default:
+                break;
+        }
+    });
+};
