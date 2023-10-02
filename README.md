@@ -18,7 +18,7 @@ This is a 3D solar system simulator built using Laravel, Vue, Vite, and Three.js
 
 ### Prerequisites
 
-- PHP >= 8.0
+- PHP >= 8.2
 - Node.js >= 14
 - Composer
 - Yarn or npm
