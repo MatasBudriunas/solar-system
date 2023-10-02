@@ -54,7 +54,15 @@ This is a 3D solar system simulator built using Laravel, Vue, Vite, and Three.js
     cp .env.example .env
     ```
 
-5. **Development Server**
+5. **Generate Laravel Key**
+
+    This is an essential step to ensure that your Laravel application is secure. This key is used for encryption and should be set before you run the development server.
+
+    ```bash
+    php artisan key:generate
+    ```
+
+6. **Development Server**
 
     ```bash
     php artisan serve
